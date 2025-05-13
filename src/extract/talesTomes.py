@@ -9,12 +9,11 @@ def generateBookData() -> list:
     #generate data in romanian language and cultural context
     synthetic = Faker("ro_RO")
     
+    #generating data for the database fields
     transaction_id = synthetic.uuid4()
-    first_name = synthetic.first_name
-    last_name = synthetic.last_name
-
-    # taking first 2 letters from first and last name and create an ID
-    user_id = (first_name[:2] + last_name[:2]).lower()
+    first_name = synthetic.first_name()
+    last_name = synthetic.last_name()
+    user_id = (first_name[:2] + last_name[:2]).lower() # taking first 2 letters from first and last name and create an ID
     personal_number = synthetic.ssn();
     birth_date = synthetic.date_of_birth()
     city = synthetic.city()
@@ -22,3 +21,37 @@ def generateBookData() -> list:
     amount = synthetic.random_int(1, 200)
     currency_code = synthetic.currency_code()
     time = synthetic.date_time_between("-1d", "now")
+
+    return[
+        transaction_id, first_name, last_name, user_id, personal_number, birth_date, city,
+        iban, amount, currency_code, time
+    ]
+
+# Method to load data
+def loadData(data: list) -> None:
+    "Connecting to database and inserting data into specified tables"
+
+    connection = psycopg2.connect(
+        dbname = "talesTomes",
+        user = "postgres",
+        password = "2805",
+        host = "localhost",
+        port = 5432
+    )
+
+    cursor = connection.cursor()
+
+    sql = """
+        INSERT into raw.talesTomes_data(
+            transaction_id, first_name, last_name, user_id, personal_number, birth_date, city,
+            iban, amount, currency_code, time
+        ) VALUES (
+            %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s
+        );
+    """
+    connection.commit()
+
+if __name__ == "__main__":
+    for _ in range(100):
+        synthetic_data = generateBookData()
+        loadData(synthetic_data)
