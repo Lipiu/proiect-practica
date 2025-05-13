@@ -1,4 +1,4 @@
-INSERT INTO raw.talesTomesData(
+INSERT INTO raw.tales_tomes_data(
     transaction_id,
     first_name,
     last_name,

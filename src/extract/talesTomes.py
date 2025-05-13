@@ -3,7 +3,7 @@ import psycopg2
 from faker import Faker
 
 # Method to generate synthetic data for our company
-def generateBookData() -> list:
+def generate_book_data() -> list:
     "Generate data for Tales&Tomes Company."
     
     #generate data in romanian language and cultural context
@@ -28,7 +28,7 @@ def generateBookData() -> list:
     ]
 
 # Method to load data
-def loadData(data: list) -> None:
+def load_data(data: list) -> None:
     "Connecting to database and inserting data into specified tables"
 
     connection = psycopg2.connect(
@@ -53,5 +53,5 @@ def loadData(data: list) -> None:
 
 if __name__ == "__main__":
     for _ in range(100):
-        synthetic_data = generateBookData()
-        loadData(synthetic_data)
+        synthetic_data = generate_book_data()
+        load_data(synthetic_data)

@@ -1,2 +1,2 @@
-SELECT * FROM raw.talesTomesData
+SELECT * FROM raw.tales_tomes_data
 LIMIT 10;
