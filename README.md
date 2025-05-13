@@ -36,8 +36,8 @@ Tales & Tomes provides statistical information about books read and time spent r
 - Users that completed most reading challenges
 ##
 ## Data Warehouse Design
-Server: `TalesTomes`\
-Database: `TalesTomes.db`
+Server: `talesTomes`\
+Database: `talesTomes.db`
 
 ## Sources
 - **Tales&Tomes App** - Own platform data.
