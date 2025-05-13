@@ -56,6 +56,7 @@ user_profile_data
 | birth_date | DATE | Birth date |
 | city | VARCHAR(50) | User's city |
 | iban | VARCHAR(25) | Bank account number |
+| amount | INT | Amount of money of the transaction
 | currency_code | VARCHAR(3) | Currency code used in the transaction |
 | time | TIMESTAMP | Transaction time |
 
