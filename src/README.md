@@ -60,10 +60,8 @@ To select data from `users_data` table use the code from `src/tables/raw/select_
 | Column Name | Data Type | Description |
 | ----- | ----- | ----- |
 | transaction_id | VARCHAR(50) PRIMARY KEY | raw/tales_tomes_data/transaction_id |
-| user_id | INT FOREIGN KEY | raw/user_id |
+| user_id | VARCHAR(20) FOREIGN KEY | raw/user_id |
 | currency_code | VARCHAR(3) | raw/tales_tomes_data/currency_code |
-| title | VARCHAR(300) | raw/books/title |
-| author | VARCHAR (300) | raw/books/author |
 
 ##
 `dim_user`
@@ -81,7 +79,8 @@ To select data from `users_data` table use the code from `src/tables/raw/select_
 `dim_book`
 | Column Name | Data Type | Description |
 | ----- | ----- | ----- |
-| title | VARCHAR(300) | Unique title of the book|
-| author | VARCHAR(300) | Name of the book author |
-| year_of_publication | TEXT | The year in which the book was published |
-| publisher | VARCHAR(300) | The publisher of the book |
+| title | VARCHAR(300) | src/books/title|
+| author | VARCHAR(300) | src/books/author |
+| year_of_publication | TEXT | src/books/year_of_publication |
+| publisher | VARCHAR(300) | src/books/publisher |
+| currency_code | VARCHAR(3) | src/tales_tomes_data/currency_code |
