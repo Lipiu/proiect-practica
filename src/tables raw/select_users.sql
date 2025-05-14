@@ -1,0 +1,2 @@
+SELECT * FROM raw.users
+LIMIT 10
