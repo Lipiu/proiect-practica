@@ -60,4 +60,28 @@ To select data from `users_data` table use the code from `src/tables/raw/select_
 | Column Name | Data Type | Description |
 | ----- | ----- | ----- |
 | transaction_id | VARCHAR(50) PRIMARY KEY | raw/tales_tomes_data/transaction_id |
-| user_id | INT FOREIGN KEY | raw/users/user_id
+| user_id | INT FOREIGN KEY | raw/user_id |
+| currency_code | VARCHAR(3) | raw/tales_tomes_data/currency_code |
+| title | VARCHAR(300) | raw/books/title |
+| author | VARCHAR (300) | raw/books/author |
+
+##
+`dim_user`
+| Column Name | Data Type | Description |
+| ----- | ----- | ----- |
+| first_name | VARCHAR (255) | src/tales_tomes_data/first_name |
+| last_name | VARCHAR(255) | src/tales_tomes_data/last_name |
+| user_id | VARCHAR(20) | src/tales_tomes_data/last_name |
+| personal_number | VARCHAR(20) | src/tales_tomes_data/last_name |
+| birth_date | DATE | src/tales_tomes_data/last_name |
+| city | VARCHAR(50) | src/tales_tomes_data/last_name |
+| iban | VARCHAR(25) | src/tales_tomes_data/last_name |
+
+##
+`dim_book`
+| Column Name | Data Type | Description |
+| ----- | ----- | ----- |
+| title | VARCHAR(300) | Unique title of the book|
+| author | VARCHAR(300) | Name of the book author |
+| year_of_publication | TEXT | The year in which the book was published |
+| publisher | VARCHAR(300) | The publisher of the book |
