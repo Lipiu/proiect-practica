@@ -3,7 +3,7 @@ CREATE TABLE IF NOT EXISTS raw.tales_tomes_data(
     first_name VARCHAR(255),
     last_name VARCHAR(255),
     user_id VARCHAR(20),
-    personal_number INT,
+    personal_number VARCHAR(20),
     birth_date DATE,
     city VARCHAR(50),
     iban VARCHAR(25),

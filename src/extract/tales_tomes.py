@@ -42,14 +42,18 @@ def load_data(data: list) -> None:
     cursor = connection.cursor()
 
     sql = """
-        INSERT into raw.talesTomes_data(
+        INSERT into raw.tales_tomes_data(
             transaction_id, first_name, last_name, user_id, personal_number, birth_date, city,
             iban, amount, currency_code, time
         ) VALUES (
             %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s
         );
     """
+    cursor.execute(sql, data)
+
     connection.commit()
+    cursor.close()
+    connection.close()
 
 if __name__ == "__main__":
     for _ in range(100):
