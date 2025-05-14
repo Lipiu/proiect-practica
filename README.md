@@ -41,10 +41,10 @@ Database: `talesTomes.db`
 
 ## Sources
 - **Tales&Tomes App** - Own platform data.
-- **Libby** - Partner platform for providing locations of nearby libraries.\
+- **Kaggle** - Provider for the data set.
 
 **Tables**\
-user_profile_data
+tales_tomes_data
 
 | Column Name | Data Type | Description |
 | ----- | ----- | ----- |
@@ -62,23 +62,30 @@ user_profile_data
 
 ##
 
-reading_activity
+book
 
 | Column Name | Data Type | Description |
 | ----- | ----- | ----- |
-| activity_id | VARCHAR(50) | Unique identifier for the reading activity (primary key)|
-| user_id | VARCHAR(20) | Associated user ID |
-| book_id | VARCHAR(50) | Unique identifier for the book |
-| book_title | VARCHAR(255) | Title of the book being read |
-| author | VARCHAR(100) | Author of the book |
-| start_date | DATE | The date the user started reading the book |
-| finish_date | DATE | The date the user finished reading the book|
-| status | VARCHAR(20) | Reading status: Reading, Completed, Paused, Abandoned |
-| current_page | INT | Page the user is currently on
-| total_pages | INT | Total number of pages in the book
-| rating | INT | User's rating (eg: 1-5 stars)
-| review | TEXT | Optional review or notes about a books
-| genre | VARCHAR(100) | Genre / Category of the book
+| title | VARCHAR(300) | Unique title of the book|
+| author | VARCHAR(300) | Name of the book author |
+| year_of_publication | TEXT | The year in which the book was published |
+| publisher | VARCHAR(300) | The publisher of the book |
+
+##
+
+ratings
+|Column Name | Data Type | Description |
+| ----- | ----- | ----- |
+| user_id| TEXT | The unique id of the user |
+| isbn | TEXT | Numeric commercial book identifier |
+| rating | INT | The rating of the book |
+
+users
+|Column Name | Data Type | Description |
+| ----- | ----- | ----- |
+| user_id | INT | The ID of the user |
+| location | VARCHAR(100) | The location of the user |
+| age | INT | The age of the user |
 
 ## Resources
-To be completed...
+[The dataset for the project is available here](https://www.kaggle.com/datasets/saurabhbagchi/books-dataset)
