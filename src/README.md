@@ -6,8 +6,8 @@ in `talesTomes.db` database will be created 3 layers.\
 - **staging** --> transformed data
 - **trusted** --> consumption data
 
-
-### Raw layer
+##
+## Raw layer
 
 #### Create layer
 To create `raw` layer use the SQL query from `src/schemas/raw.sql` file.
@@ -52,3 +52,12 @@ To select data from `ratings_data` table use the code from `src/tables/raw/selec
 
 **users_data**\
 To select data from `users_data` table use the code from `src/tables/raw/select_users.sql` file.
+
+##
+## Staging layer
+
+`fact_transaction`
+| Column Name | Data Type | Description |
+| ----- | ----- | ----- |
+| transaction_id | VARCHAR(50) PRIMARY KEY | raw/tales_tomes_data/transaction_id |
+| user_id | INT FOREIGN KEY | raw/users/user_id
