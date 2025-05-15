@@ -1,5 +1,7 @@
 CREATE TABLE IF NOT EXISTS trusted.user(
     user_id VARCHAR(20) NOT NULL,
+    book_title VARCHAR(300),
+    author VARCHAR(300),
     first_name VARCHAR(255) NOT NULL,
     last_name VARCHAR(255) NOT NULL,
     personal_number VARCHAR(20) NOT NULL,
