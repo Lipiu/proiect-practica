@@ -4,3 +4,5 @@
 * ~~`select data to staging table.`~~\
 * ~~`update documentation.`~~\
 * ~~`run sql queries in pgAdmin.`~~\
+* `insert_user.sql trusted nu e gata`
+* `de testat loader.py`
