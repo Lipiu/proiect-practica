@@ -22,6 +22,7 @@ def parse_data(row: dict):
 
     data = {
     #titlu, autor, year, publisher
+        "isbn": row["ISBN"],
         "title": row["Book-Title"],
         "author": row["Book-Author"],
         "year_of_publication": row["Year-Of-Publication"],
@@ -43,15 +44,16 @@ def load_data(data: dict) -> None:
 
     sql = """
         INSERT INTO raw.books (
-            title, author, year_of_publication, publisher
+            isbn, title, author, year_of_publication, publisher
         ) VALUES (
-            %s, %s, %s, %s
+            %s, %s, %s, %s, %s
 );
     """
 
     cursor.execute(
         sql,
         (
+            data.get("isbn"),
             data.get("title"),
             data.get("author"),
             data.get("year_of_publication"),

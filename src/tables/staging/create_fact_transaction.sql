@@ -3,8 +3,7 @@ CREATE TABLE IF NOT EXISTS staging.fact_transaction (
     user_id VARCHAR(20),
     book_id INT,
     amount INT,
-    currency_to VARCHAR(3),
-    type VARCHAR(15),
+    currency_code VARCHAR(3),
     time TIMESTAMP,
     FOREIGN KEY (user_id) REFERENCES staging.dim_user(user_id),
     FOREIGN KEY (book_id) REFERENCES staging.dim_books(book_id)
