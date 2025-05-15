@@ -67,20 +67,24 @@ To select data from `users_data` table use the code from `src/tables/raw/select_
 `dim_user`
 | Column Name | Data Type | Description |
 | ----- | ----- | ----- |
-| first_name | VARCHAR (255) | src/tales_tomes_data/first_name |
-| last_name | VARCHAR(255) | src/tales_tomes_data/last_name |
-| user_id | VARCHAR(20) | src/tales_tomes_data/last_name |
-| personal_number | VARCHAR(20) | src/tales_tomes_data/last_name |
-| birth_date | DATE | src/tales_tomes_data/last_name |
-| city | VARCHAR(50) | src/tales_tomes_data/last_name |
-| iban | VARCHAR(25) | src/tales_tomes_data/last_name |
+| user_id | VARCHAR(20) | raw/tales_tomes_data/last_name |
+| first_name | VARCHAR (255) | raw/tales_tomes_data/first_name |
+| last_name | VARCHAR(255) | raw/tales_tomes_data/last_name |
+| personal_number | VARCHAR(20) | raw/tales_tomes_data/last_name |
+| birth_date | DATE | raw/tales_tomes_data/last_name |
+| city | VARCHAR(50) | raw/tales_tomes_data/last_name |
+| iban | VARCHAR(25) | raw/tales_tomes_data/last_name |
+| location | VARCHAR(100) | raw/users/location |
+| age | INT | raw/users/age |
 
 ##
 `dim_book`
 | Column Name | Data Type | Description |
 | ----- | ----- | ----- |
-| title | VARCHAR(300) | src/books/title|
-| author | VARCHAR(300) | src/books/author |
-| year_of_publication | TEXT | src/books/year_of_publication |
-| publisher | VARCHAR(300) | src/books/publisher |
-| currency_code | VARCHAR(3) | src/tales_tomes_data/currency_code |
+| book_id | SERIAL PRIMARY KEY | raw/books/book_id |
+| isbn | VARCHAR(20) UNIQUE | raw/books/isbn |
+| title | VARCHAR(300) | raw/books/title|
+| author | VARCHAR(300) | raw/books/author |
+| year_of_publication | TEXT | raw/books/year_of_publication |
+| publisher | VARCHAR(300) | raw/books/publisher |
+| currency_code | VARCHAR(3) | raw/tales_tomes_data/currency_code |
