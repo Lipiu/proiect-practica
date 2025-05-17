@@ -53,3 +53,74 @@ Database: `TalesAndTomes.db`
 ## Resources
 
 [The dataset for the project is available here](https://www.kaggle.com/datasets/saurabhbagchi/books-dataset)
+
+##
+
+## Structure
+
+The proiect-practica repository contains:
+
+- Files:
+
+  - `.gitignore` --> store directories and files to be ignored by Git.
+  - `README.md` --> contains all instructions and documentation about this repository.
+
+- Folders
+  - `data` --> in this file you can find the datasets used for this project.
+  - `src` --> here is the source code (Python + SQL)
+    - `schemas`
+      - raw
+      - staging
+      - trusted
+    - `tables`
+      - `raw`
+        - create
+        - insert
+        - select
+      - `staging`
+        - create
+        - insert
+        - select
+      - `trusted`
+        - create
+        - insert
+        - select
+    - `extract`
+      - `books.py` --> used to extract data from `books.csv`.
+      - `ratings.py` --> used to extract data from `ratings.csv`.
+      - `tales_tomes.py` --> used to generate synthetic data for the users.
+      - `tempCodeRunnerFile.py` --> a random file generated after running the `tales_tomes.py`.
+      - `generate.py` --> used to randomize user transactions.
+    - `load`
+      - `loader.py` --> a script used to load data so you don't have to do it manually.
+    - `transform`
+      - `transformer.py` --> used for automating the process of converting the data from: raw->staging->trusted.
+    - `assets`
+      - contains a picture of the chart with people that read the most books.
+
+##
+
+## Tools you need in order to use/contribute this project:
+
+- **Git**
+  - from [here](https://git-scm.com/downloads) you can install git.
+  - check if git installed correcly by using: git --version
+- **Python**
+  - from [here](https://www.python.org/downloads/) you can install python.
+  - check if python installed correctly by using: python --version
+- **PostgreSQL - pgAdmin 4**
+  - needed to manage your PostgreSQL database via a GUI.
+  - from [here](https://www.postgresql.org/download/) you can install PostgreSQL.
+  - from [here](https://www.pgadmin.org/) you can download and install pgAdmin 4.
+
+## Clone
+
+Steps to clone this project:
+
+```
+1. Navigate to your desired repository where you'll clone this project.
+cd <your-desired-repository-path>
+
+2. Clone the project by using: git clone
+git clone https://github.com/Lipiu/proiect-practica.git
+```
