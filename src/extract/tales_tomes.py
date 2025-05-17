@@ -58,6 +58,6 @@ def load_data(data: list) -> None:
     connection.close()
 
 if __name__ == "__main__":
-    for _ in range(100):
+    for _ in range(400):
         synthetic_data = generate_book_data()
         load_data(synthetic_data)
