@@ -2,6 +2,7 @@ INSERT INTO raw.tales_tomes_data(
     transaction_id,
     first_name,
     last_name,
+    age,
     user_id,
     personal_number,
     birth_date,
@@ -9,8 +10,11 @@ INSERT INTO raw.tales_tomes_data(
     iban, 
     amount, 
     currency_code,
-    time 
+    time,
+    location
 ) VALUES (
+    %s,
+    %s,
     %s,
     %s,
     %s,

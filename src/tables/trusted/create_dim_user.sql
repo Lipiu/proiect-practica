@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS staging.dim_user (
+CREATE TABLE IF NOT EXISTS trusted.dim_user (
     user_id VARCHAR(20) PRIMARY KEY,
     first_name VARCHAR(255),
     last_name VARCHAR(255),

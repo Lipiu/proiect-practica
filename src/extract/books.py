@@ -26,14 +26,14 @@ def parse_data(row: dict):
         "title": row["Book-Title"],
         "author": row["Book-Author"],
         "year_of_publication": row["Year-Of-Publication"],
-        "publisher:": row["Publisher"]
+        "publisher": row["Publisher"]
     }
 
     return data
 
 def load_data(data: dict) -> None:
     conn = psycopg2.connect(
-        dbname = "talesTomes",
+        dbname = "TalesAndTomes",
         user = "postgres",
         password = "2805",
         host = "localhost",

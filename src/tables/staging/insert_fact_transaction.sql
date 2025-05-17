@@ -4,10 +4,9 @@ INSERT INTO staging.fact_transaction (
 SELECT
     t.transaction_id,
     t.user_id,
-    b.book_id,
+    (SELECT book_id FROM staging.dim_books ORDER BY RANDOM() LIMIT 1),
     t.amount,
     t.currency_code,
     t.time
 FROM raw.tales_tomes_data t
-JOIN raw.ratings r ON t.user_id = r.user_id
-JOIN staging.dim_books b ON r.isbn = b.isbn;
+JOIN staging.dim_user u ON t.user_id = u.user_id;
