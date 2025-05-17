@@ -69,22 +69,22 @@ The proiect-practica repository contains:
   - `data` --> in this file you can find the datasets used for this project.
   - `src` --> here is the source code (Python + SQL)
     - `schemas`
-      - raw
-      - staging
-      - trusted
+      - raw -> the `raw` schema of the project.
+      - staging -> the `staging` schema of the project.
+      - trusted -> the `trusted` schema of the project.
     - `tables`
       - `raw`
-        - create
-        - insert
-        - select
+        - create -> create the `raw` table.
+        - insert -> insert data into the `raw` table.
+        - select -> select data from the `raw` table.
       - `staging`
-        - create
-        - insert
-        - select
+        - create -> create the `staging` table.
+        - insert -> insert data in the `staging` table.
+        - select -> select data from the `staging` table.
       - `trusted`
-        - create
-        - insert
-        - select
+        - create -> create the `trusted` table.
+        - insert -> insert data in the `trusted` table.
+        - select -> select data from the `trusted` table.
     - `extract`
       - `books.py` --> used to extract data from `books.csv`.
       - `ratings.py` --> used to extract data from `ratings.csv`.
