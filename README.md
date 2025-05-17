@@ -118,9 +118,15 @@ The proiect-practica repository contains:
 Steps to clone this project:
 
 ```
-1. Navigate to your desired repository where you'll clone this project.
-cd <your-desired-repository-path>
+1. Navigate to your desired directory/folder where you'll clone this project.
+You can also:
+  --> Navigate to desired folder, click on the path bar and write "cmd" and the terminal will open at that location.
 
-2. Clone the project by using: git clone
+Or manually navigate by using:
+cd <your-repository-path>
+
+2. After you found the perfect place to clone the repo use:
 git clone https://github.com/Lipiu/proiect-practica.git
+
+Now the repository has been successfully cloned and you can start contributing!
 ```
