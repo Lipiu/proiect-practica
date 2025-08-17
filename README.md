@@ -100,7 +100,7 @@ The proiect-practica repository contains:
 
 ##
 
-## Tools you need in order to use/contribute this project:
+## Tools you need in order to use/contribute to this project:
 
 - **Git**
   - from [here](https://git-scm.com/downloads) you can install git.
